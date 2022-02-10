@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import RoutesPath from './routes/RoutesPath';
+import './styles/App.scss';
+import Header from './components/Header';
+import { useState, useEffect } from 'react';
+
+
+export default function App() {
+
+  const [lodgings, setLodgings] = useState([]);
+
+  // code Effect de bord par rapport au composant
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/data/logements.json`)
+      .then((response) => response.json()
+        .then((data) =>
+          //console.log(data)
+          setLodgings(data)
+        )
+        .catch((error) => console.log(error))
+      )
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+    <RoutesPath lodgings={lodgings} />
+    </>
   );
 }
-
-export default App;

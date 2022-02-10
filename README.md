@@ -1,3 +1,46 @@
+# Développez une application Web avec React et React Router KASA
+Ce projet s'inscrit dans le cadre de la formation "Développeur Front-End" proposée par OpenClassrooms.
+Compétences visées
+
+    Développer les routes d'une application web avec React Router
+    Initialiser une application web avec un framework
+    Créer des composants avec React
+    
+## Contexte 
+Kasa vous recrute en tant que développeur Front-end en freelance pour développer leur nouvelle plateforme web. Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant. Avec plus de 500 annonces postées chaque jour Kasa fait partie des leaders de la location d’appartements entre particuliers en France.
+
+### Ton objectif
+Démarrer le projet React et développer l’ensemble de l’application, les composants React, les routes React Router, en suivant les maquettes Figma (responsives !) et toutes les infos que je te donne ci-dessous. Et ce avec un code de qualité !
+
+### Back-end / data :
+Je t'ai extrait les 20 dernières annonces de logements dans ce fichier JSON pour que tu puisses construire le Front qui correspond.
+
+### Contraintes techniques
+Tu trouveras les coding guidelines de Kasa ici.
+
+### Design
+Voici les maquettes sur Figma pour le design d’interface. J’ai l’habitude de travailler avec la logique de composants sur Figma, Sandra m’a dit que ça te faciliterait le travail sur React. Tu trouveras toutes les ressources dont tu as besoin directement dans la maquette (logo, icônes pour les composants, etc.). Pour cela, il suffit de cliquer sur la ressource souhaitée et de faire "Exporter" au format voulu.
+Contraintes fonctionnelles
+
+### Quelques précisions sur les fonctionnalités du site :
+
+Pour le défilement des photos dans la galerie (composant Gallery) :
+    Si l'utilisateur se trouve à la première image et qu'il clique sur "image précédente", la galerie affiche la dernière image.
+    Inversement, quand l'image affichée est la dernière de la galerie, si l'utilisateur clique sur "image suivante", la galerie affiche la première image.
+    S'il n'y a qu'une seule image, les boutons "suivant" et "précédent" n'apparaissent pas.
+    La galerie doit toujours rester de la même hauteur, celle indiquée sur la maquette Figma. Les images seront donc coupées et centrées dans le cadre de l’image.
+    Collapse : Par défaut, les Collapse sont fermés à l'initialisation de la page.
+    Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
+    Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
+
+Laura
+
+### Créer avec Create React App && Utilisation de SASS
+
+### Visiter l'application dans votre navigateur à l'adresse suivante :
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

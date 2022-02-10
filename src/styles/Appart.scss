@@ -1,0 +1,35 @@
+.appart {
+    width: 100%;
+    background: $color-gray;
+    border: 1px solid #000000;
+    display: flex;
+    gap: rem(30);
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+    margin-top: rem(22);
+
+    @include tablet {
+        margin: 40px 0 63px;
+        margin-top: rem(43);
+        padding: rem(56) rem(50) 0;
+    }
+        
+    @include desktop {
+        margin: rem(43) auto;
+        width: rem(1200);
+    }
+
+}
+
+.appartCard {
+    width: rem(340);
+    height: rem(340);
+    background: linear-gradient($text-color-red 0%, #000000 100%);
+    border-radius: rem(10);
+}
+
+// .appartCard__img {
+
+// }
