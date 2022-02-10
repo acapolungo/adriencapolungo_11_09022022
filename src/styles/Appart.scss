@@ -1,7 +1,5 @@
 .appart {
     width: 100%;
-    background: $color-gray;
-    border: 1px solid #000000;
     display: flex;
     gap: rem(30);
     flex-wrap: wrap;
@@ -11,9 +9,10 @@
     margin-top: rem(22);
 
     @include tablet {
+        background: $color-gray;
         margin: 40px 0 63px;
         margin-top: rem(43);
-        padding: rem(56) rem(50) 0;
+        padding: rem(56) rem(50) rem(56);
     }
         
     @include desktop {
@@ -24,10 +23,36 @@
 }
 
 .appartCard {
-    width: rem(340);
-    height: rem(340);
-    background: linear-gradient($text-color-red 0%, #000000 100%);
+    width: 335px;
+    min-width: rem(335);
+    height: rem(255);
+    min-height: rem(255);
+    position: relative;
     border-radius: rem(10);
+    @include tablet {
+        width: rem(340);
+        height: rem(340);
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: rem(10);
+        z-index: -1;
+    }
+    &__blend {
+        width: rem(340);
+        height: rem(340);
+        background-image: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+    }
+    &__title {
+        color: #ffffff;
+        font-weight: 500;
+        position: absolute;
+        padding: 20px;
+        font-size: rem(18);
+        left: 20px;
+        bottom: 20px;
+    }
 }
 
 // .appartCard__img {
