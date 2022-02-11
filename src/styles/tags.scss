@@ -1,0 +1,21 @@
+
+.tags {
+    display: flex;
+    align-items: center;
+    &__item {
+        font-size: rem(10);
+        border-radius: 10px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: .3rem 1rem;
+        margin-top: rem(10);
+        font-weight: 400;  
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+        @include tablet {
+            font-size: rem(14);
+            margin-top: rem(20);
+        }
+    }
+}

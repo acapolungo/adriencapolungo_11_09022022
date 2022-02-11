@@ -10,7 +10,7 @@ export default function Header() {
             </div>
             <div className='header__links'>
                 <Link className='active' to="/">Accueil</Link>
-                <Link to="/lodging">A Propos</Link>
+                <Link to="/about">A Propos</Link>
             </div>
         </header>        
     )
