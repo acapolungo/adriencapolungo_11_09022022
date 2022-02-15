@@ -2,6 +2,7 @@
 .tags {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     &__item {
         font-size: rem(10);
         border-radius: 10px;

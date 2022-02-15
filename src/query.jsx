@@ -9,7 +9,7 @@ export async function getAllData() {
 export async function getLodgingById(id) {
     const data = await fetch(`${process.env.PUBLIC_URL}/data/logements.json`)
     const response = await data.json()
-    debugger
+    // debugger
     return response.find(lodging => lodging.id === id)
 }
 

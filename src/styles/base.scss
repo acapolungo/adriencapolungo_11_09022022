@@ -9,6 +9,12 @@ $secondary-color: #ffffff;
 $bg-color: #f6f6f6;
 $secondary-bg: #E3E3E3;
 
+
+:export {
+    primary-color: #ff6060;
+    secondary-bg: #E3E3E3;
+}
+
 // =============== Reset CSS ===============
 *,
 *::after,
@@ -18,13 +24,23 @@ $secondary-bg: #E3E3E3;
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     box-sizing: border-box;
     cursor: default;
     font-family: 'Montserrat', sans-serif;
-    color: $primary-color;
+    // color: $primary-color;
     min-height: 100vh;
+}
+
+main {
+    min-height: 75vh;
+    padding: 0 20px 22px;
+
+    @media (min-width: 1281px) {
+        padding: 0;
+        margin: 0 auto;
+        width: rem(1200);
+    }
 }
 
 a {

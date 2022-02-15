@@ -10,6 +10,10 @@ import { getAllData } from '../../query';
 export default function Home() {
 
   const [lodgings, setLodgings] = useState([])
+  const banner = {
+    title: 'Chez vous, partout et ailleurs',
+    name: 'bannerhome'
+  };
 
   useEffect(() => {
     getAllData().then(data => setLodgings(data))
@@ -18,7 +22,7 @@ export default function Home() {
 
   return (
     <main className='main'>
-      <Banner />
+      <Banner banner={banner} />
       <section className='appart'>
         {lodgings.map(({ id, cover, title }) => <AppartCards cover={cover} title={title} id={id} key={id} />)}
       </section>

@@ -1,0 +1,16 @@
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    @include desktop {
+        max-width: rem(1023);
+    }
+    article:nth-child(2) {
+        margin-top: rem(19);
+        @include tablet {
+            margin-top: rem(31);
+        }
+    }
+}

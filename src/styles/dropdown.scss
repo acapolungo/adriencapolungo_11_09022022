@@ -1,0 +1,45 @@
+
+
+.dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: rem(10);
+    cursor: pointer;
+    color: $secondary-color;
+    background-color: $primary-color;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    margin-bottom: rem(20);
+    @include tablet {
+        margin-bottom: rem(33);
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: rem(20);
+        border: rem(10);
+    }
+
+    &__Équipements--open, &__Description--open,
+    &__Fiabilité--open, &__Respect--open, &__Service--open, &__Sécurité--open {
+        width: 100%;
+        padding-top: rem(50);
+        border-radius: 0 rem(0) rem(10) rem(10);
+        color: $primary-color;
+        background-color: $bg-color;
+        padding:rem(20);
+        font-weight: 400;
+        font-size: rem(12);
+        li {
+            list-style: none;
+        }
+        @include tablet { 
+            font-size: rem(18);
+        }
+    }
+}

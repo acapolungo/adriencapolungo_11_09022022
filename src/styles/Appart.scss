@@ -8,28 +8,42 @@
     margin-top: rem(22);
 
     @include tablet {
-        justify-content: start;
-        background: $bg-color;
-        margin: 40px 0 63px;
-        margin-top: rem(43);
+        padding: rem(22);
+        justify-content: space-around;
         padding: rem(56) rem(50) rem(56);
-    }
-        
-    @include desktop {
-        margin: rem(43) auto;
-        width: rem(1200);
+        margin-top: 0;
     }
 
+    @include desktop {
+        background: $bg-color;
+        margin: rem(43) auto;
+        width: rem(1200);
+        border-radius: rem(25);
+    }
 }
 
 .appartCard {
-    width: 335px;
-    min-width: rem(335);
+    width: 100%;
+    // width: 335px;
+    // min-width: rem(335);
     height: rem(255);
     min-height: rem(255);
     position: relative;
     border-radius: rem(10);
-    background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, $primary-color 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $primary-color 100%);
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        border-radius: rem(10);
+        background: -webkit-linear-gradient( top , #000000, rgba(255,255,255,0));
+        background: linear-gradient( to top , #000000, rgba(255,255,255,0));
+    }
+
     @include tablet {
         width: rem(340);
         height: rem(340);
@@ -47,5 +61,6 @@
         font-size: rem(18);
         left: 20px;
         bottom: 20px;
+        z-index: 10;
     }
 }

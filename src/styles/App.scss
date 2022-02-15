@@ -1,10 +1,14 @@
-@import './base.scss';
-@import './utils/Function.scss';
 @import './utils/Mixins.scss';
+@import './utils/Function.scss';
+@import './base.scss';
 @import './header.scss';
 @import './appart.scss';
 @import './banner.scss';
 @import './gallery.scss';
 @import './lodging.scss';
 @import './tags.scss';
-@import './ratings.scss'
+@import './ratings.scss';
+@import './footer.scss';
+@import './error.scss';
+@import './dropdown.scss';
+@import './About.scss';

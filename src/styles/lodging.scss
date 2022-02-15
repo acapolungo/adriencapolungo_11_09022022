@@ -1,18 +1,18 @@
 .lodgingdetail {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: rem(30);
+    justify-content: space-between;
 
     @include desktop {
         margin: rem(30) auto;
         width: rem(1200);
     }
 
-
     &__title {
-        font-size: rem(18);
         font-weight: 500;
-        font-size: 2rem;
+        font-size: rem(18);
+        color: $primary-color;
         @include tablet {
             font-size: rem(36);
         }
@@ -20,30 +20,51 @@
     &__location {
         font-size: rem(14);
         margin-top: 0.5rem;
+        color: $primary-color;
         @include tablet {
             font-size: rem(18);
         }
     }
 
+    &__left { 
+        width: 70%;
+    }
+
     &__right {
-        width: rem(170);
-        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-direction: row-reverse;
+        margin-top: rem(18);
         img {
-            border-radius: 100px;
-            width: 5rem;
+            width: rem(32);
+            border-radius: 100%;
+        }
+        @include tablet {
+            width: rem(170);
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 0;
+            img {
+                width: rem(64);
+            }
         }
     }
     &__host {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
         width: 100%;
     }
     &__info {
-        font-size: rem(18);
+        font-size: rem(12);
         display: flex;
         flex-direction: column;
         margin-right: 0.5rem;
+        color: $primary-color;
+        @include tablet {
+            font-size: rem(18);
+        }
     }
     &__firstname {
         text-align: end;
@@ -51,8 +72,20 @@
     &__lastname {
         text-align: end;
     }
-}
-
-.ratings {
-    margin-top: 2rem;
+    &__contdrop {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+    &__drop {
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: rem(20) 0;
+    }
 }
