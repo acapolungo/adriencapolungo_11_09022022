@@ -8,7 +8,6 @@ import Tags from '../../components/Tags'
 import Ratings from '../../components/Ratings'
 import Dropdown from '../../components/Dropdown'
 import DropdownList from '../../components/DropdownList'
-//import Error404 from '../Error/Error404'
 
 // importData
 import { getLodgingById } from '../../query';
@@ -16,12 +15,8 @@ import { getLodgingById } from '../../query';
 export default function Lodging() {
 
   const [lodging, setLodging] = useState(null)
-  //const [isDropOpen, setIsDropOpen] = useState(false)
   const { lodgingId } = useParams()
-  let html;
 
-  // debugger
-  // no dependance // [lodgingId] infinite loop
   useEffect(() => {
     let isMounted = true;
     getLodgingById(lodgingId).then(data => {
@@ -31,10 +26,8 @@ export default function Lodging() {
     return () => { isMounted = false }
   }, [lodgingId]);
 
-  // const {id, pictures, title, description, equipments, host, location, rating, tags} = setLodging(lodgingId)
-
-  if (lodging) {
-    html = (
+  return (
+    lodging ? (
       <main className='main'>
         <Gallery pictures={lodging.pictures} key={lodging.id} />
         <section className="lodgingdetail">
@@ -70,13 +63,10 @@ export default function Lodging() {
         </section>
 
       </main>
-    )
-  } else {
-    html = (
-      <div class="sectionloader">
-        <span class="loader loader__circle"></span>
+    ) : (
+      <div className="sectionloader">
+        <span className="loader loader__circle"></span>
       </div>
     )
-  }
-  return html
+  )
 }

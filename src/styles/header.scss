@@ -29,7 +29,10 @@
         display: flex;
         white-space: nowrap;
         color: $primary-color;
-        padding-right: rem(20);
+        
+        a:nth-child(1) {
+            padding-right: rem(20);
+        }
 
         a:hover {
             text-decoration: underline;

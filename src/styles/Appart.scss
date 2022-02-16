@@ -24,10 +24,9 @@
 
 .appartCard {
     width: 100%;
-    // width: 335px;
-    // min-width: rem(335);
     height: rem(255);
-    min-height: rem(255);
+    max-width: rem(335);
+    max-height: rem(255);
     position: relative;
     border-radius: rem(10);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $primary-color 100%);
@@ -40,13 +39,15 @@
         width: 100%;
         height: 150px;
         border-radius: rem(10);
-        background: -webkit-linear-gradient( top , #000000, rgba(255,255,255,0));
-        background: linear-gradient( to top , #000000, rgba(255,255,255,0));
+        background: -webkit-linear-gradient( top , rgba(0, 0, 0, 0.5), rgba(255,255,255,0));
+        background: linear-gradient( to top , rgba(0, 0, 0, 0.5), rgba(255,255,255,0));
     }
 
     @include tablet {
         width: rem(340);
         height: rem(340);
+        max-width: rem(340);
+        max-height: rem(340);
     }
     &__img {
         width: 100%;

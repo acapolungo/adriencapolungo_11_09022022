@@ -1,25 +1,41 @@
 .notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__container {
+        width: rem(260);
         display: flex;
         flex-direction: column;
         align-items: center;
         min-height: 75vh;
         justify-content: center;
+        color: $primary-color;
         h1 {
+            font-size: rem(96);
+            font-weight: 700;
             margin-bottom: 1.5rem;
-            font-size: 12.5rem;
         }
         p {
-            font-size: 1.8rem;
+            font-size: rem(18);
             text-align: center;
             margin-bottom: 2rem;
         }
         :link {
+            margin-top: rem(80);
+            font-size: rem(14);
             text-decoration: underline;
         }
         @include tablet {
+            width: 100%;
             p {
+                font-size: rem(36);
                 width: 75%;
+            }
+            :link {
+                font-size: rem(18);
+            }
+            h1 {
+                font-size: rem(288);
             }
         }
     }

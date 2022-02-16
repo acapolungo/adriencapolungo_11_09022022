@@ -19,8 +19,7 @@ Je t'ai extrait les 20 dernières annonces de logements dans ce fichier JSON pou
 Tu trouveras les [coding guidelines de Kasa ici](https://course.oc-static.com/projects/Front-End+V2/P9+React+1/Coding+guidelines+Kasa+FR.pdf).
 
 ### Design
-Voici les maquettes sur Figma pour le design d’interface. J’ai l’habitude de travailler avec la logique de composants sur Figma, Sandra m’a dit que ça te faciliterait le travail sur React. Tu trouveras toutes les ressources dont tu as besoin directement dans la maquette (logo, icônes pour les composants, etc.). Pour cela, il suffit de cliquer sur la ressource souhaitée et de faire "Exporter" au format voulu.
-Contraintes fonctionnelles
+[maquettes sur Figma pour le design](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=4%3A1)
 
 ### Quelques précisions sur les fonctionnalités du site :
 
@@ -48,6 +47,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+[projet Kasa](https://620d01efba00fe0007e75d47--acapolungo-kasa.netlify.app/)
 
 ### `npm start`
 
