@@ -44,11 +44,12 @@
     }
     &__counter {
         position: absolute;
-        font-size: rem(18);
+        font-size: rem(20);
         font-weight: 500;
         left: 50%;
         bottom: rem(30);
         color: $secondary-color;
+        text-shadow: 3px 2px 4px rgba(0,0,0,0.5);
         opacity: 0;
         @include tablet {
             opacity: 1;

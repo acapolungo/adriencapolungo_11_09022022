@@ -7,6 +7,7 @@ import Gallery from '../../components/Gallery'
 import Tags from '../../components/Tags'
 import Ratings from '../../components/Ratings'
 import Dropdown from '../../components/Dropdown'
+import DropdownList from '../../components/DropdownList'
 //import Error404 from '../Error/Error404'
 
 // importData
@@ -33,8 +34,6 @@ export default function Lodging() {
   // const {id, pictures, title, description, equipments, host, location, rating, tags} = setLodging(lodgingId)
 
   if (lodging) {
-    const listEquipments = lodging.equipments.map((list, index) => <li key={index}>{list}</li>)
-
     html = (
       <main className='main'>
         <Gallery pictures={lodging.pictures} key={lodging.id} />
@@ -63,9 +62,9 @@ export default function Lodging() {
             />
           </div>
           <div className="lodgingdetail__drop">
-            <Dropdown
+            <DropdownList
               title='Équipements'
-              content={listEquipments}
+              list={lodging.equipments}
             />
           </div>
         </section>
@@ -73,7 +72,11 @@ export default function Lodging() {
       </main>
     )
   } else {
-    html = 'Mettre un spinner'
+    html = (
+      <div class="sectionloader">
+        <span class="loader loader__circle"></span>
+      </div>
+    )
   }
   return html
 }

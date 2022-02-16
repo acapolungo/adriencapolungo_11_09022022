@@ -1,13 +1,18 @@
 
 .about {
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    padding-top: rem(10);
+}
+
+.dropdown {
     @include desktop {
         max-width: rem(1023);
     }
-    article:nth-child(2) {
+    &:nth-child(2) {
         margin-top: rem(19);
         @include tablet {
             margin-top: rem(31);

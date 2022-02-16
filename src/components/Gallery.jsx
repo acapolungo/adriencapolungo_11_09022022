@@ -15,17 +15,16 @@ export default function Gallery({ pictures }) {
         nextIndex > pictures.length - 1 ? setImgIndex(0) : setImgIndex(nextIndex)
     }
     return (
-        
         <section className="gallery">
             <img className='gallery__image' src={pictures[imgIndex]} alt="Intérieur du logement" />
-            <div className='gallery__counter'>{imgIndex+1}/{pictures.length}</div>
+            <div className='gallery__counter'>{imgIndex + 1}/{pictures.length}</div>
             {pictures.length && pictures.length > 1 ?
                 <div>
                     <span className="gallery__arrow-left" onClick={prevImg}>
-                    <FontAwesomeIcon icon={faChevronLeft} />
+                        <FontAwesomeIcon icon={faChevronLeft} />
                     </span>
                     <span className="gallery__arrow-right" onClick={nextImg}>
-                    <FontAwesomeIcon icon={faChevronRight} />
+                        <FontAwesomeIcon icon={faChevronRight} />
                     </span>
                 </div> : ""
             }
