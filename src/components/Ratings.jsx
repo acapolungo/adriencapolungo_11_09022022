@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import base from '../styles/base.scss';
 
-//console.log(base["primary-color"])
+console.log(base["primary-color"])
 
 export default function Ratings({ ratings }) {
 

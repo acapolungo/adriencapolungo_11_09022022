@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 // Import Components
@@ -16,15 +16,17 @@ export default function Lodging() {
 
   const [lodging, setLodging] = useState(null)
   const { lodgingId } = useParams()
+  const navigate = useNavigate();
 
   useEffect(() => {
-    let isMounted = true;
+    let redirect = true;
+    const goToErrorPage = () => navigate('/*');
     getLodgingById(lodgingId).then(data => {
-      if (isMounted) setLodging(data)
-    })
-      .catch(err => console.log(err))
-    return () => { isMounted = false }
-  }, [lodgingId]);
+      setLodging(data)
+      return () => { redirect = false; }
+    }).catch(err => console.log(err))
+      if (!redirect) { goToErrorPage();}
+  }, [lodgingId, navigate]);
 
   return (
     lodging ? (
