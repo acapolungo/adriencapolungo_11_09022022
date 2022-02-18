@@ -40,11 +40,12 @@ Laura
 [Lien vers l'app Kasa](https://620f80ef8e97ad4be5dd8b46--acapolungo-kasa.netlify.app/)
 
 
-### Getting Started with Create React App
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 [projet Kasa](https://620d01efba00fe0007e75d47--acapolungo-kasa.netlify.app/)
