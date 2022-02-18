@@ -37,10 +37,10 @@ Laura
 ### Créer avec Create React App && Utilisation de SASS
 
 ### Visiter l'application dans votre navigateur à l'adresse suivante :
-[Lien vers l'app Kasa](https://620f80ef8e97ad4be5dd8b46--acapolungo-kasa.netlify.app/
+[Lien vers l'app Kasa](https://620f80ef8e97ad4be5dd8b46--acapolungo-kasa.netlify.app/)
 
 
-#### Getting Started with Create React App
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
