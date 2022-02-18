@@ -19,13 +19,12 @@ export default function Lodging() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let redirect = true;
-    const goToErrorPage = () => navigate('/*');
     getLodgingById(lodgingId).then(data => {
       setLodging(data)
-      return () => { redirect = false; }
-    }).catch(err => console.log(err))
-      if (!redirect) { goToErrorPage();}
+    }).catch(err => {
+      console.log(err)
+      navigate('/*');
+    })
   }, [lodgingId, navigate]);
 
   return (
