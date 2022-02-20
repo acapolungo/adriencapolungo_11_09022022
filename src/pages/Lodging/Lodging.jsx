@@ -8,6 +8,7 @@ import Tags from '../../components/Tags'
 import Ratings from '../../components/Ratings'
 import Dropdown from '../../components/Dropdown'
 import DropdownList from '../../components/DropdownList'
+//import Error404 from '../Error/Error404'
 
 // importData
 import { getLodgingById } from '../../query';
@@ -18,12 +19,17 @@ export default function Lodging() {
   const { lodgingId } = useParams()
   const navigate = useNavigate();
 
+
   useEffect(() => {
+    const goToErrorPage = () => navigate('/*');
+
     getLodgingById(lodgingId).then(data => {
-      setLodging(data)
+      if (data === undefined) { goToErrorPage();}
+      else {
+        setLodging(data)
+      }
     }).catch(err => {
       console.log(err)
-      navigate('/*');
     })
   }, [lodgingId, navigate]);
 
